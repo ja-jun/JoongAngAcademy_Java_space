@@ -1,0 +1,28 @@
+package p08.polymorphism2;
+
+// [polymorphism을 이용하여 spring, Android등에서 어떻게 라이브러리를 제공하고, 우리 개발자들은 어떻게 라이브러리를 사용하느냐...]
+// p08.polymorphism2안에 있는 class들을 이용하여 예를 들면  
+// 1. spring은 Vehicle, Driver 클래스를 library로 제공
+// 2. spring을 사용하는 개발자
+//    - Vehicle class의 자식 class인 Bus, Taxi class 생성하고 
+//    - DriverEx처럼 spring library를 사용하는 프로그램 코딩
+public class DriverEx {
+
+	public static void main(String[] args) {
+		Driver driver = new Driver();
+		
+		Bus bus = new Bus();
+		Taxi taxi = new Taxi();
+		Sedan sedan = new Sedan();
+		
+		Vehicle v;
+		
+		v = bus;      // 자동형변환(promotion)
+//		v = taxi;
+		driver.drive(v);
+//		driver.drive(bus);
+//		driver.drive(taxi);
+		
+	}
+
+}

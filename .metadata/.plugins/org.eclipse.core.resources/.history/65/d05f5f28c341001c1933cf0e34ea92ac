@@ -1,0 +1,13 @@
+package p01.basic2;
+
+public class TestCircle {
+
+	public static void main(String[] args) {
+		Circle pizza = new Circle(10, "자바피자");
+		double pizzaArea = pizza.getArea();
+		
+		System.out.println(pizza.name + "의 면적은 " + pizzaArea"입니다.");
+	
+	}
+
+}
